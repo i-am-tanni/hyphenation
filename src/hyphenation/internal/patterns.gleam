@@ -235,7 +235,7 @@ pub fn conseq_sublist(l: List(a)) -> List(#(Int, List(a))) {
     |> do_conseq_sublist
     |> list.map(fn(subl) { #(i, subl) })
   })
-  |> list.concat
+  |> list.flatten
 }
 
 /// TODO (Docs) Generate all ??? sublists of a list.
